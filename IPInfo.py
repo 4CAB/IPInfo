@@ -7,7 +7,15 @@ import requests, json
 
 
 api = "http://ip-api.com/json/"
-
+print("""
+ _____ _____    _____ _   _ ______ ____  
+|_   _|  __ \  |_   _| \ | |  ____/ __ \ 
+  | | | |__) |   | | |  \| | |__ | |  | |
+  | | |  ___/    | | | . ` |  __|| |  | |
+ _| |_| |       _| |_| |\  | |   | |__| |
+|_____|_|      |_____|_| \_|_|    \____/ 
+                                         
+	""")
 toma = input("1.Si desea obtener informacion de una ip \n2.Si desea obtener informacion de una lista de ip's \n>>> ")
 
 if toma == "1":
@@ -69,9 +77,3 @@ else:
 			time.sleep(1.5)
 	except:
 		print("Asegurese de tener conexion wifi")
-
-		#i += 1
-		#if i == 45:
-			#print("Refrescandome")
-			#time.sleep(15)
-			#i = 1
