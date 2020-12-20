@@ -16,7 +16,7 @@ print("""
 |_____|_|      |_____|_| \_|_|    \____/ 
                                          
 	""")
-toma = input("1.Si desea obtener informacion de una ip \n2.Si desea obtener informacion de una lista de ip's \n>>> ")
+toma = str(input("1.Si desea obtener informacion de una ip \n2.Si desea obtener informacion de una lista de ip's \n>>> "))
 
 if toma == "1":
 	try:
@@ -25,24 +25,25 @@ if toma == "1":
 		req = requests.get(api+ip).json()
 		while req["status"] == "fail":
 			a = 1
-			if a == 1:
-				print("Ip no existe")
-				break
-			if a == 0:
-				print("Target", ":", req["query"])
-				print("Status", ":", req["status"])
-				print("Country", ":", req["country"])
-				print("Country Code", ":", req["countryCode"])
-				print("Region", ":", req["region"])
-				print("Region Name", ":", req["regionName"])
-				print("City", ":", req["city"])
-				print("Zip Code", ":", req["zip"])
-				print("Lat", ":", req["lat"])
-				print("Lon", ":", req["lon"])
-				print("Time Zone", ":", req["timezone"])
-				print("Isp", ":", req["isp"])
-				print("Org", ":", req["org"])
-				print("··········································")
+			pass
+		if a == 1:
+			print("Ip no existe")
+
+		if a == 0:
+			print("Target", ":", req["query"])
+			print("Status", ":", req["status"])
+			print("Country", ":", req["country"])
+			print("Country Code", ":", req["countryCode"])
+			print("Region", ":", req["region"])
+			print("Region Name", ":", req["regionName"])
+			print("City", ":", req["city"])
+			print("Zip Code", ":", req["zip"])
+			print("Lat", ":", req["lat"])
+			print("Lon", ":", req["lon"])
+			print("Time Zone", ":", req["timezone"])
+			print("Isp", ":", req["isp"])
+			print("Org", ":", req["org"])
+			print("··········································")
 
 	except:
 		print("Asegurese de tener conexion wifi")
